@@ -33,6 +33,6 @@
     +HEAD:{{ local_git_deploy_remote_branch }}
 
 - name: check out the pushed branch
-  command: git reset --hard {{ deployment_branch }}
+  command: git reset --hard {{ local_git_deploy_remote_branch }}
   args:
     chdir: "{{ local_git_deploy_remote_repo }}"
